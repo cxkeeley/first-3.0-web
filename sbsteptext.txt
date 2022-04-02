@@ -154,3 +154,12 @@ inside have a
     </div>
   </div>
 </div>
+
+// this props need to destructure so it need to be in curlybraces {}
+declare servicecard to be reuse
+const ServiceCard = ({ color, title, icons, subtitle }) => (
+  <div className='flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor:pointer hover:shadow-xl'>
+    
+  </div>
+)
+
