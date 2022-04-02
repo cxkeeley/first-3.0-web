@@ -1,0 +1,156 @@
+⭐ step by step
+
+⭐ using vite to install react app
+> npm init vite@latest
+> project name: ./ (install in own folder)
+> package name: terserah mau pilih nama apa
+> done now run
+
+⭐ ketik 
+> npm install
+
+⭐ untuk run 
+> npm run dev
+
+⭐ using tailwind to the css
+> npm install -D tailwindcss postcss autoprefixer
+> npx tailwindcss init -p
+
+⭐ copy to tailwind.config.js
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+⭐ delete all files in index.css -> replace with
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+⭐ follow the step at tailwind.css website
+
+⭐ go to App.jsx
+delete the header and all the conponent we dont use until this
+
+//function App() { ------------> ganti ke arrow function
+const App = () => {
+  return (
+    <div className='App'>
+      <h1 className='text-3xl font-bold underline'>
+        Hello world!
+      </h1>
+    </div>
+  );
+}
+
+export default App;
+
+and run 
+> npm run dev
+
+⭐ after that go to smart_contract folder
+> npm init -y
+----> untuk membuat file package.json
+
+⭐ mulai membuat react
+1. buat folder components
+    a. file pertama Navbar.jsx -> rafce
+        atau manual function Navbar() {}
+        dengan ES6 const Navbar = () => {
+          return (
+            <h1>Navbar</h1>
+          );
+        }
+    b. Footer.jsx
+    c. Loader.jsx ---> loading spinner
+    d. Services.jsx
+    e. Transaction.jsx
+    f. Welcome
+
+2. Untuk mengimport semua components dalam 1 line ---> buat file index.js
+export { default as Loader } from './Loader';
+export { default as Navbar } from './Navbar';
+export { default as Services } from './Services';
+export { default as Transaction } from './Transaction';
+export { default as Welcome } from './Welcome';
+export { default as Footer } from './Footer';
+
+3. Untuk mengimport pergi ke App.jsx
+import { Navbar, Footer, Services, Transaction, Welcome } from './components';
+
+untuk add react-icons
+> npm i react-icons (atau) npm install react-icons
+> npm i ethers ---> for interaction with ethers
+
+4. go to Navbar.jsx
+> import logo from '../../images/logo.png';
+
+5. dalam navbar ada semantic html <nav></nav>
+  <div></div> untuk kontainer images logo
+  <ul></ul> untuk nav link
+
+6. declare const NavbarItem untuk <li></li> item didalam <ul></ul>
+    baru panggil NavbarItem di dalam ul pakai <NavbarItem />
+    kasih key={ item + index } harus tambah + index supaya unik jadi ada indexnya masing2
+
+⭐ welcome.jsx
+1. import beberapa icons dari react-icons
+
+2. buat <div></div> untuk wrapper
+  <div>
+    <div>
+
+      <div> -----------kiri------------>
+        <h1></h1>
+        <p></p>
+        <button></button> ada function connectWallet
+        <div> served as a grid
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div> 
+      </div>
+
+
+
+    </div>
+  </div>
+
+3. buat function connectWallet
+  const connectWallet = () => {}
+
+⭐ install the hardhat
+> npm install --save-dev hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+
+then run first command
+> npx hardhat
+> create a basic sample project ---> enter
+> enter
+> create gitignore yes
+
+to run it correctly
+> npx hardhat test
+
+⭐ after the wallet all is done we open terminal and
+> npx hardhat run scripts/deploy.js --network ropsten
+
+
+⭐ services section
+import some icons from react-icons
+
+inside have a
+<div>
+  <div>
+    <div>
+      <h1></h1>
+    </div>
+  </div>
+</div>
