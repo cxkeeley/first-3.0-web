@@ -126,6 +126,7 @@ export const TransactionProvider = ({ children }) => {
 
       setTransactionCount(transactionCount.toNumber());
 
+      window.reload()
     } catch (error) {
       console.log(error);
 
